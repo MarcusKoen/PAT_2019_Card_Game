@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg, MMSystem,
-  Vcl.ExtCtrls, Vcl.MPlayer;
+  Vcl.ExtCtrls;
 
 type
   TCGLogIn = class(TForm)
@@ -15,8 +15,7 @@ type
     lblRegister: TLabel;
     lblForgotPass: TLabel;
     imgLogInBG: TImage;
-    MediaPlayer1: TMediaPlayer;
-    procedure FormActivate(Sender: TObject);
+    procedure btnLogInClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,12 +30,20 @@ implementation
 {$R *.dfm}
 
 
-procedure TCGLogIn.FormActivate(Sender: TObject);
+procedure TCGLogIn.btnLogInClick(Sender: TObject);
 begin
- { MediaPlayer1.FileName := 'C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\audio.mp3';
-  MediaPlayer1.Open;
-  MediaPlayer1.Play;}
-  sndPlaySound('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\BG.wav', SND_NODEFAULT or SND_ASYNC);
+  if btnLogIn.Caption = 'Login' then
+    begin
+      sndPlaySound('BG.wav', SND_NODEFAULT or SND_ASYNC);
+      btnLogIn.Caption := 'Stop';
+    end
+  else
+    begin
+      sndPlaySound(nil, SND_NODEFAULT or SND_ASYNC);
+      btnLogIn.Caption := 'Stop';
+    end;
+
+
 end;
 
 end.

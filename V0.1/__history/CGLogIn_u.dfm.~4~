@@ -12,7 +12,6 @@ object CGLogIn: TCGLogIn
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
-  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object imgLogInBG: TImage
@@ -3897,15 +3896,5 @@ object CGLogIn: TCGLogIn
     Height = 41
     Caption = 'Login'
     TabOrder = 2
-  end
-  object MediaPlayer1: TMediaPlayer
-    Left = 120
-    Top = 128
-    Width = 253
-    Height = 30
-    DoubleBuffered = True
-    Visible = False
-    ParentDoubleBuffered = False
-    TabOrder = 3
   end
 end

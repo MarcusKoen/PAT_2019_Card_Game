@@ -36,7 +36,7 @@ begin
  { MediaPlayer1.FileName := 'C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\audio.mp3';
   MediaPlayer1.Open;
   MediaPlayer1.Play;}
-  sndPlaySound('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\BG.wav', SND_NODEFAULT or SND_ASYNC);
+  sndPlaySound('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\BG.wav', SND_NODEFAULT or SND_ASYNC)
 end;
 
 end.

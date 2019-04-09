@@ -99,7 +99,11 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="CGLogIn_u.pas">
-            <Form>CGLogIn</Form>
+            <Form>Login</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CGServer_u.pas">
+            <Form>frmServer</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

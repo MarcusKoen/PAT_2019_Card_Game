@@ -1,7 +1,7 @@
-object Login: TLogin
+object CGLogIn: TCGLogIn
   Left = 0
   Top = 0
-  Caption = 'Login'
+  Caption = 'CGLogIn'
   ClientHeight = 240
   ClientWidth = 458
   Color = clBtnFace

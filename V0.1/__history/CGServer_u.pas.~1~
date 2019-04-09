@@ -4,14 +4,10 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.FMTBcd, Data.DB, Data.SqlExpr,
-  Data.Win.ADODB;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TfrmServer = class(TForm)
-    ADOConnection1: TADOConnection;
-    DataSource1: TDataSource;
-    SQLTable1: TSQLTable;
+  TForm1 = class(TForm)
   private
     { Private declarations }
   public
@@ -19,7 +15,7 @@ type
   end;
 
 var
-  frmServer: TfrmServer;
+  Form1: TForm1;
 
 implementation
 

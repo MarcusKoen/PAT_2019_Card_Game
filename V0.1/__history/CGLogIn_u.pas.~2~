@@ -1,0 +1,26 @@
+unit CGLogIn_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TCGLogIn = class(TForm)
+    edtUsername: TEdit;
+    edtPassword: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CGLogIn: TCGLogIn;
+
+implementation
+
+{$R *.dfm}
+
+end.

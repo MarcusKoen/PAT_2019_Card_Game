@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/04/09 15:08:24.301,=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/04/09 15:09:33.851,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2019/04/09 15:09:33.851,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/04/09 15:09:41.781,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CardGame_p.dproj=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

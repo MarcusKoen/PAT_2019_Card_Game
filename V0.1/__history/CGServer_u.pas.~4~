@@ -5,15 +5,14 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.FMTBcd, Data.DB, Data.SqlExpr,
-  Data.Win.ADODB, System.Win.ScktComp, Vcl.Grids, Vcl.DBGrids;
+  Data.Win.ADODB, System.Win.ScktComp;
 
 type
   TfrmServer = class(TForm)
     ADOConnection1: TADOConnection;
     DataSource1: TDataSource;
+    SQLTable1: TSQLTable;
     ServerSocket1: TServerSocket;
-    ADOTable1: TADOTable;
-    DBGrid1: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private

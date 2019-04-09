@@ -15,17 +15,34 @@ object frmServer: TfrmServer
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 272
+    Top = 48
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
   object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\marcu\One' +
+      'Drive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Users_players.acc' +
+      'db;Mode=ReadWrite;Persist Security Info=False'
+    Mode = cmReadWrite
+    Provider = 'Microsoft.ACE.OLEDB.12.0'
     Left = 112
-    Top = 104
+    Top = 136
   end
   object DataSource1: TDataSource
-    Left = 264
-    Top = 104
-  end
-  object SQLTable1: TSQLTable
-    Left = 344
-    Top = 112
+    DataSet = ADOTable1
+    Left = 224
+    Top = 136
   end
   object ServerSocket1: TServerSocket
     Active = False
@@ -33,5 +50,13 @@ object frmServer: TfrmServer
     ServerType = stNonBlocking
     Left = 32
     Top = 32
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Users'
+    Left = 320
+    Top = 136
   end
 end

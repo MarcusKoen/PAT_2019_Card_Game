@@ -1,15 +1,13 @@
-unit CGLogIn_u;
+unit CGServer_u;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TCGLogIn = class(TForm)
-    edtUsername: TEdit;
-    edtPassword: TEdit;
+  TForm1 = class(TForm)
   private
     { Private declarations }
   public
@@ -17,7 +15,7 @@ type
   end;
 
 var
-  CGLogIn: TCGLogIn;
+  Form1: TForm1;
 
 implementation
 

@@ -17,7 +17,6 @@ type
     imgLogInBG: TImage;
     MediaPlayer1: TMediaPlayer;
     procedure FormActivate(Sender: TObject);
-    procedure btnLogInClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,21 +31,13 @@ implementation
 {$R *.dfm}
 
 
-procedure TCGLogIn.btnLogInClick(Sender: TObject);
-  var
-    sUserName, sPass : string; //longer var names or not?
-begin
-  sUserName := edtUsername.Text;
-  sPass := edtPassword.Text;
-end;
-
 procedure TCGLogIn.FormActivate(Sender: TObject);
 begin
  { MediaPlayer1.FileName := 'C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\audio.mp3';
   MediaPlayer1.Open;
   MediaPlayer1.Play;}
   sndPlaySound('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\BG.wav', SND_LOOP or SND_ASYNC);
-  // add looping fuction lol!  done???
+  // add looping fuction lol!
 end;
 
 end.

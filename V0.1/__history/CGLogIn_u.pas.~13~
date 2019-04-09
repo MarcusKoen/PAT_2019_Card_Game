@@ -36,8 +36,7 @@ procedure TCGLogIn.btnLogInClick(Sender: TObject);
   var
     sUserName, sPass : string; //longer var names or not?
 begin
-  sUserName := edtUsername.Text;
-  sPass := edtPassword.Text;
+//asd
 end;
 
 procedure TCGLogIn.FormActivate(Sender: TObject);

@@ -13,8 +13,6 @@ object Login: TLogin
   OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  OnClose = FormClose
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object imgLogInBG: TImage
@@ -3910,12 +3908,5 @@ object Login: TLogin
     Caption = 'Login'
     TabOrder = 2
     OnClick = btnLogInClick
-  end
-  object ClientSocket1: TClientSocket
-    Active = False
-    ClientType = ctNonBlocking
-    Port = 0
-    Left = 56
-    Top = 24
   end
 end

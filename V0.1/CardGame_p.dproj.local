@@ -2,13 +2,13 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2019/04/09 15:08:24.000.301,=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2019/04/09 15:09:33.000.851,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm</Transaction>
-    <Transaction>2019/04/09 15:09:33.000.851,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas</Transaction>
-    <Transaction>2019/04/09 15:09:41.000.781,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CardGame_p.dproj</Transaction>
-    <Transaction>2019/04/09 15:18:03.000.124,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGLogIn_u.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas</Transaction>
-    <Transaction>2019/04/09 15:18:03.000.124,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGLogIn_u.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm</Transaction>
-    <Transaction>2019/04/09 18:26:52.981,=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
-    <Transaction>2019/04/09 18:27:03.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.dfm</Transaction>
-    <Transaction>2019/04/09 18:27:03.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 15:09:33.000.851,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/04/09 15:09:33.000.851,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2019/04/09 15:09:41.000.781,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CardGame_p.dproj=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/04/09 15:18:03.000.124,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGLogIn_u.pas</Transaction>
+    <Transaction>2019/04/09 15:18:03.000.124,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGLogIn_u.dfm</Transaction>
+    <Transaction>2019/04/09 18:26:52.000.981,=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
+    <Transaction>2019/04/09 18:27:03.000.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.pas</Transaction>
+    <Transaction>2019/04/09 18:27:03.000.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.dfm</Transaction>
   </Transactions>
 </BorlandProject>

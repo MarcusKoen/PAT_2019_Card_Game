@@ -49,6 +49,7 @@ begin
           if (sUserName = ADOTable1['Username'])  AND (sPass = ADOTable1['Password']) then
             begin
               ShowMessage('Successfully connected');
+              Exit;
             end
           else
             begin

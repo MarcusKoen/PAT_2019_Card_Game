@@ -16,8 +16,8 @@ object frmServer: TfrmServer
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
-    Left = 272
-    Top = 48
+    Left = 296
+    Top = 8
     Width = 320
     Height = 120
     DataSource = DataSource1

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg, MMSystem{music play library},
-  Vcl.ExtCtrls, Vcl.MPlayer, System.Win.ScktComp{delete library usage};
+  Vcl.ExtCtrls, Vcl.MPlayer, System.Win.ScktComp{delete library usage}, CGServer_u;
 
 type
   TLogin = class(TForm)
@@ -41,6 +41,22 @@ procedure TLogin.btnLogInClick(Sender: TObject);
 begin
   sUserName := edtUsername.Text;
   sPass := edtPassword.Text;
+
+  With frmServer do
+    begin
+      while NOT (ADOTable1.Eof) do
+        begin
+          if (sUserName = ADOTable1['Username'])  AND (sPass = ADOTable1['Password']) then
+            begin
+              ShowMessage('Successfully connected');
+            end
+          else
+            ADOTable1.Next
+
+
+        end;
+
+    end;
 end;
 
 procedure TLogin.FormActivate(Sender: TObject);
@@ -60,9 +76,9 @@ end;
 procedure TLogin.FormCreate(Sender: TObject);
 begin
   ClientSocket1.Port := 23;
- //local TCP/IP address of the server
- ClientSocket1.Host := '192.168.167.12';    //implementation of server ip authent and ip entering, msg dioalog etc
- ClientSocket1.Active := true;
+  //local TCP/IP address of the server
+  ClientSocket1.Host := '192.168.167.12';    //implementation of server ip authent and ip entering, msg dioalog etc
+  ClientSocket1.Active := true;
 end;
 
 end.

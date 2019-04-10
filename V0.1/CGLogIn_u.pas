@@ -51,7 +51,10 @@ begin
               ShowMessage('Successfully connected');
             end
           else
-            ADOTable1.Next
+            begin
+              ADOTable1.Next;
+              ShowMessage('Unsuccessfully connected');
+            end;
 
 
         end;

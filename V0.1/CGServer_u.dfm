@@ -34,6 +34,7 @@ object frmServer: TfrmServer
       'Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\marcu\One' +
       'Drive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Users_players.acc' +
       'db;Mode=ReadWrite;Persist Security Info=False'
+    LoginPrompt = False
     Mode = cmReadWrite
     Provider = 'Microsoft.ACE.OLEDB.12.0'
     Left = 112

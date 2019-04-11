@@ -46,7 +46,30 @@ begin
     begin
       while NOT (ADOTable1.Eof) do
         begin
-          if sUserName <> then
+          if (sUserName = ADOTable1['Username'])  AND (sPass = ADOTable1['Password']) then          {while NOT (Form1.ADOTable1.Eof) do
+        begin
+          if (Edit1.Text = Form1.ADOTable1['Usernam']) AND (Edit2.Text = Form1.ADOTable1['Password']) then
+            begin
+              ShowMessage('Does exist');
+              Exit;
+            end
+          else
+            Form1.ADOTable1.Next;
+            ShowMessage('Does not exist');
+            Exit;
+        end;
+}
+            begin
+              ShowMessage('Successfully connected');
+              Exit;
+            end
+          else
+            begin
+              ADOTable1.Next;
+              ShowMessage('Unsuccessfully connected');
+              Exit;
+            end;
+
 
         end;
 

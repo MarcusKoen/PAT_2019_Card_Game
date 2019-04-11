@@ -10,5 +10,8 @@
     <Transaction>2019/04/09 18:26:52.000.981,=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
     <Transaction>2019/04/09 18:27:03.000.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.pas</Transaction>
     <Transaction>2019/04/09 18:27:03.000.840,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGServer_u.dfm</Transaction>
+    <Transaction>2019/04/11 18:32:08.503,=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
+    <Transaction>2019/04/11 18:32:24.355,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.dfm</Transaction>
+    <Transaction>2019/04/11 18:32:24.355,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGClient_u.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

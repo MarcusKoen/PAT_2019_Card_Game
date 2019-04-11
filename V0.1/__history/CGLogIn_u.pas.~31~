@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg, MMSystem{music play library},
-  Vcl.ExtCtrls, Vcl.MPlayer, System.Win.ScktComp{delete library usage}, CGServer_u;
+  Vcl.ExtCtrls, Vcl.MPlayer, System.Win.ScktComp{delete library usage}, CGServer_u, CGClient_u;
 
 type
   TLogin = class(TForm)
@@ -42,14 +42,23 @@ begin
   sUserName := edtUsername.Text;
   sPass := edtPassword.Text;
 
-  With frmServer do
+  With frmServer do     // check to see if username and password is correct or not
     begin
       while NOT (ADOTable1.Eof) do
         begin
-          if sUserName <> ADOTable1['Username']
-
+          if (sUserName = ADOTable1['Username'])  AND (sPass = ADOTable1['Password']) then
+            begin
+              ShowMessage('Successfully connected');
+              Client.ShowModal;
+              Login.CloseModal;
+            end
+          else
+            begin
+              ADOTable1.Next;
+              ShowMessage('Unsuccessfully connected');
+              Exit;
+            end;
         end;
-
     end;
 end;
 

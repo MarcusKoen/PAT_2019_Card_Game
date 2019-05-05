@@ -55,28 +55,24 @@ begin
   if bClubs = true then     //Clubs
     begin
       SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'c.bmp');
-       SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'c.bmp');
       bClubs := false;
     end
   else
     if bHearts = true then     //hearts
       begin
         SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'h.bmp');
-          SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'c.bmp');
          bHearts := false;
       end
     else
       if bSpades = TRUE then   //spades
         begin
           SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 's.bmp');
-           SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'c.bmp');
           bSpades := false;
         end
       else
         if bDiamonds = true then         // diamonds
           begin
             SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'd.bmp');
-            SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(Card) + 'c.bmp');
             bDiamonds := false;
           end;
 

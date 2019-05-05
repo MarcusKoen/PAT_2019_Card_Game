@@ -1329,8 +1329,8 @@ object Form2: TForm2
       0000000000000000000000000000000000000000008000000000}
   end
   object SpeedButton3: TSpeedButton
-    Left = 232
-    Top = 544
+    Left = 352
+    Top = 552
     Width = 73
     Height = 97
     Glyph.Data = {
@@ -1986,11 +1986,10 @@ object Form2: TForm2
       0000000000000000000000000000000000000000008000000000}
   end
   object SpeedButton4: TSpeedButton
-    Left = 352
-    Top = 544
+    Left = 232
+    Top = 552
     Width = 73
     Height = 97
-    Caption = '3'
     Glyph.Data = {
       36510000424D3651000000000000360000002800000047000000600000000100
       1800000000000051000000000000000000000000000000000000008000000000

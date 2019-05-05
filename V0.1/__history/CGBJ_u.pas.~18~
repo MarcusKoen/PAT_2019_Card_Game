@@ -1,0 +1,97 @@
+unit CGBJ_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    Button1: TButton;
+    Label1: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    arrClubs1 : array[1..13] of string;
+    arrHearts2 : array[1..13] of string;
+    arrSpades3 : array[1..13] of string;
+    arrDiamonds4 : array[1..13] of string;
+  const
+    bClubs = false;
+    bSpades = false;
+    bHearts = false;
+    bDiamonds = false;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.Button1Click(Sender: TObject);
+  var
+    Suite : byte;
+    Card : byte;
+    k : byte;
+begin
+  Suite := Random(4) + 1;
+    case Suite  of
+      1 : bClubs := TRUE;
+      2 : bHearts := TRUE;
+      3 : bSpades := TRUE;
+      4 : bDiamonds := TRUE;
+    end;
+  Card := Random(13) + 1;
+
+  if bClubs = true then     //Clubs
+    begin
+      case Card of
+        1 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\1c.bmp');
+        2 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\2c.bmp');
+        3 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\3c.bmp');
+        4 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\4c.bmp');
+        5 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\5c.bmp');
+        6 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\6c.bmp');
+        7 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\7c.bmp');
+        8 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\8c.bmp');
+        9 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\9c.bmp');
+        10 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\10c.bmp');
+        11 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\11c.bmp');
+        12 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\12c.bmp');
+        13 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\13c.bmp');
+      end;
+    end
+  else
+    if bHearts = true then
+      begin
+        case Card of
+          1 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\1c.bmp');
+          2 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\2c.bmp');
+          3 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\3c.bmp');
+          4 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\4c.bmp');
+          5 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\5c.bmp');
+          6 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\6c.bmp');
+          7 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\7c.bmp');
+          8 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\8c.bmp');
+          9 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\9c.bmp');
+          10 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\10c.bmp');
+          11 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\11c.bmp');
+          12 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\12c.bmp');
+          13 : SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\13c.bmp');
+        end;
+      end;
+
+
+  Label1.Caption := IntToStr(Suite);
+end;
+
+end.

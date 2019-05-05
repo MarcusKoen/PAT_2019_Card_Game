@@ -2,8 +2,8 @@ object Login: TLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 240
-  ClientWidth = 458
+  ClientHeight = 406
+  ClientWidth = 656
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,8 +20,8 @@ object Login: TLogin
   object imgLogInBG: TImage
     Left = 0
     Top = 0
-    Width = 458
-    Height = 240
+    Width = 656
+    Height = 406
     Align = alClient
     Picture.Data = {
       0A544A504547496D6167656EDE0100FFD8FFE000104A46494600010100000100
@@ -3853,11 +3853,12 @@ object Login: TLogin
       37472A926893243003EDE1E4047D5C8CA525248781EB8253544FE34D4903CAC3
       2CC4B658E4F279E97EA271529D5AF79FBC49493A62539428B7847FFFD9}
     Stretch = True
+    ExplicitWidth = 458
     ExplicitHeight = 241
   end
   object lblRegister: TLabel
-    Left = 128
-    Top = 176
+    Left = 88
+    Top = 184
     Width = 40
     Height = 13
     Caption = 'Register'

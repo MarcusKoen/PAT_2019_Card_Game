@@ -49,9 +49,8 @@ begin
           if (sUserName = ADOTable1['Username'])  AND (sPass = ADOTable1['Password']) then
             begin
               ShowMessage('Successfully connected');
-              Client.ShowModal;
-              Login.CloseModal;
-              login.Free;
+              Client.Visible := true;
+              Login.Visible := False;
             end
           else
             begin

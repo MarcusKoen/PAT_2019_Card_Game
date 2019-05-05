@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   CGLogIn_u in 'CGLogIn_u.pas' {Login},
   CGServer_u in 'CGServer_u.pas' {frmServer},
-  CGClient_u in 'CGClient_u.pas' {Client};
+  CGClient_u in 'CGClient_u.pas' {Client},
+  CGRegister_u in 'CGRegister_u.pas' {Register};
 
 {$R *.res}
 
@@ -14,5 +15,6 @@ begin
   Application.CreateForm(TLogin, Login);
   Application.CreateForm(TfrmServer, frmServer);
   Application.CreateForm(TClient, Client);
+  Application.CreateForm(TRegister, Register);
   Application.Run;
 end.

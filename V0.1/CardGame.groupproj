@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{13993E5E-EC81-410D-9095-CE15D069C22C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CardGame_p.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CGBJ_p.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CardGame_p">
+        <MSBuild Projects="CardGame_p.dproj"/>
+    </Target>
+    <Target Name="CardGame_p:Clean">
+        <MSBuild Projects="CardGame_p.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CardGame_p:Make">
+        <MSBuild Projects="CardGame_p.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CGBJ_p">
+        <MSBuild Projects="CGBJ_p.dproj"/>
+    </Target>
+    <Target Name="CGBJ_p:Clean">
+        <MSBuild Projects="CGBJ_p.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CGBJ_p:Make">
+        <MSBuild Projects="CGBJ_p.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CardGame_p;CGBJ_p"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CardGame_p:Clean;CGBJ_p:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CardGame_p:Make;CGBJ_p:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

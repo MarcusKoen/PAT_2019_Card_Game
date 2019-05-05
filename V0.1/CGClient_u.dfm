@@ -2,8 +2,8 @@ object Client: TClient
   Left = 0
   Top = 0
   Caption = 'Client'
-  ClientHeight = 299
-  ClientWidth = 635
+  ClientHeight = 810
+  ClientWidth = 1041
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

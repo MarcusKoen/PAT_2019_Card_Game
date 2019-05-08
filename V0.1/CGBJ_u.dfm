@@ -7,13 +7,13 @@ object Form2: TForm2
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -27
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 33
   object SpeedButton1: TSpeedButton
     Left = 232
     Top = 40
@@ -1329,8 +1329,8 @@ object Form2: TForm2
       0000000000000000000000000000000000000000008000000000}
   end
   object SpeedButton3: TSpeedButton
-    Left = 232
-    Top = 544
+    Left = 216
+    Top = 512
     Width = 73
     Height = 97
     Glyph.Data = {
@@ -1988,13 +1988,13 @@ object Form2: TForm2
   object Label1: TLabel
     Left = 608
     Top = 40
-    Width = 31
-    Height = 13
+    Width = 77
+    Height = 33
     Caption = 'Label1'
   end
   object SpeedButton4: TSpeedButton
-    Left = 424
-    Top = 536
+    Left = 368
+    Top = 512
     Width = 73
     Height = 97
     Glyph.Data = {
@@ -2648,6 +2648,12 @@ object Form2: TForm2
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000008000000000}
+  end
+  object lblScore: TLabel
+    Left = 280
+    Top = 696
+    Width = 8
+    Height = 33
   end
   object Button1: TButton
     Left = 296

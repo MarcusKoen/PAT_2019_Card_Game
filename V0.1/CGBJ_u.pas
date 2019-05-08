@@ -15,6 +15,7 @@ type
     Label1: TLabel;
     SpeedButton4: TSpeedButton;
     lblScore: TLabel;
+    lblStatus: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -245,6 +246,16 @@ begin
         AcexD := AcexD + (UserScore - 1) + 11;
 
   lblScore.Caption := inttostr(UserScore) + ' OR ' + InttoStr(AcexD);
+
+  if UserScore = 21 then
+    lblStatus.Caption := 'win'
+  else
+    if UserScore > 21 then
+      lblStatus.Caption := 'los'
+    else
+      if UserScore < 21 then
+        lblStatus.Caption := 'not yet';
+
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);

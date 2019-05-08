@@ -2655,6 +2655,12 @@ object Form2: TForm2
     Width = 25
     Height = 33
   end
+  object lblStatus: TLabel
+    Left = 464
+    Top = 384
+    Width = 8
+    Height = 33
+  end
   object Button1: TButton
     Left = 296
     Top = 360

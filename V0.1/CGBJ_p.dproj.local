@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2019/05/05 11:12:25.000.524,=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2019/05/05 11:12:46.000.538,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_u.dfm</Transaction>
-    <Transaction>2019/05/05 11:12:46.000.538,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_u.pas</Transaction>
-    <Transaction>2019/05/05 11:12:56.000.730,C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_p.dproj</Transaction>
+    <Transaction>2019/05/05 11:12:46.000.538,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_u.pas=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/05/05 11:12:46.000.538,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_u.dfm=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2019/05/05 11:12:56.000.730,C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\CGBJ_p.dproj=C:\Users\marcu\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

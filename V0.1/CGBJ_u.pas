@@ -30,7 +30,7 @@ type
     bHearts : boolean;
     bDiamonds : boolean;
     bCard1, bCard2, bCard3 : byte;
-    UserScore, OpponentScore, AcexD : int32;
+    UserScore, OpponentScore, AcexD, totScore : int32;
 //    procedure Card1;
     procedure Card2;
     procedure Card3;
@@ -199,7 +199,7 @@ procedure TForm2.Score;
 begin
   UserScore := 0;
   AcexD := 0;
-
+  totScore := 0;
 
 
          case bCard3 of
@@ -247,13 +247,15 @@ begin
 
   lblScore.Caption := inttostr(UserScore) + ' OR ' + InttoStr(AcexD);
 
-  if UserScore = 21 then
+  totScore := UserScore + AcexD;
+
+  if totScore = 21 then
     lblStatus.Caption := 'win'
   else
-    if UserScore > 21 then
+    if totScore > 21 then
       lblStatus.Caption := 'los'
-    else
-      if UserScore < 21 then
+    else                                                                  //fix score
+      if totScore < 21 then
         lblStatus.Caption := 'not yet';
 
 end;

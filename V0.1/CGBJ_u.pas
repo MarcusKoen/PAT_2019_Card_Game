@@ -61,7 +61,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard3 := Random(13) + 1;
-      SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'c.bmp');
+      SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard3) + 'c.bmp');
 
       bClubs := false;
     end
@@ -69,7 +69,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard3 := Random(13) + 1;
-        SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'h.bmp');
+        SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 'h.bmp');
 
          bHearts := false;
       end
@@ -77,7 +77,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard3 := Random(13) + 1;
-          SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 's.bmp');
+          SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 's.bmp');
 
           bSpades := false;
         end
@@ -85,7 +85,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard3 := Random(13) + 1;
-            SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'd.bmp');
+            SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -108,7 +108,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard2 := Random(13) + 1;
-      SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'c.bmp');
+      SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'c.bmp');
 
       bClubs := false;
     end
@@ -116,7 +116,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard2 := Random(13) + 1;
-        SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'h.bmp');
+        SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'h.bmp');
 
          bHearts := false;
       end
@@ -124,7 +124,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard2 := Random(13) + 1;
-          SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 's.bmp');
+          SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 's.bmp');
 
           bSpades := false;
         end
@@ -132,7 +132,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard2 := Random(13) + 1;
-            SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'd.bmp');
+            SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -156,7 +156,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard1 := Random(13) + 1;
-      SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
+      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
 
       bClubs := false;
     end
@@ -164,7 +164,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard1 := Random(13) + 1;
-        SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'h.bmp');
+        SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
 
          bHearts := false;
       end
@@ -172,7 +172,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard1 := Random(13) + 1;
-          SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 's.bmp');
+          SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 's.bmp');
 
           bSpades := false;
         end
@@ -180,7 +180,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard1 := Random(13) + 1;
-            SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'd.bmp');
+            SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 'd.bmp');
 
             bDiamonds := false;
           end;

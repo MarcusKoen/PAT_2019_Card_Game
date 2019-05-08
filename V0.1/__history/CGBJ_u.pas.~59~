@@ -29,7 +29,7 @@ type
     bHearts : boolean;
     bDiamonds : boolean;
     bCard1, bCard2, bCard3 : byte;
-    UserScore, OpponentScore : int32;
+    UserScore, OpponentScore, AcexD : int32;
     procedure Card1;
     procedure Card2;
     procedure Card3;
@@ -61,7 +61,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard3 := Random(13) + 1;
-      SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'c.bmp');
+      SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard3) + 'c.bmp');
 
       bClubs := false;
     end
@@ -69,7 +69,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard3 := Random(13) + 1;
-        SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'h.bmp');
+        SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 'h.bmp');
 
          bHearts := false;
       end
@@ -77,7 +77,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard3 := Random(13) + 1;
-          SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 's.bmp');
+          SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 's.bmp');
 
           bSpades := false;
         end
@@ -85,7 +85,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard3 := Random(13) + 1;
-            SpeedButton4.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard3) + 'd.bmp');
+            SpeedButton4.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard3) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -108,7 +108,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard2 := Random(13) + 1;
-      SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'c.bmp');
+      SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'c.bmp');
 
       bClubs := false;
     end
@@ -116,7 +116,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard2 := Random(13) + 1;
-        SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'h.bmp');
+        SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'h.bmp');
 
          bHearts := false;
       end
@@ -124,7 +124,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard2 := Random(13) + 1;
-          SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 's.bmp');
+          SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 's.bmp');
 
           bSpades := false;
         end
@@ -132,7 +132,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard2 := Random(13) + 1;
-            SpeedButton3.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard2) + 'd.bmp');
+            SpeedButton3.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard2) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -156,7 +156,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard1 := Random(13) + 1;
-      SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
+      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
 
       bClubs := false;
     end
@@ -164,7 +164,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard1 := Random(13) + 1;
-        SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'h.bmp');
+        SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
 
          bHearts := false;
       end
@@ -172,7 +172,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard1 := Random(13) + 1;
-          SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 's.bmp');
+          SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 's.bmp');
 
           bSpades := false;
         end
@@ -180,7 +180,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard1 := Random(13) + 1;
-            SpeedButton1.Glyph.LoadFromFile('C:\Users\marcu\OneDrive\Documents\GitHub\PAT_2019_Card_Game\V0.1\card-BMPs\' + IntToStr(bCard1) + 'd.bmp');
+            SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -196,8 +196,10 @@ procedure TForm2.Score;
   var
     k : byte;
 begin
+  UserScore := 0;
+  AcexD := 0;
 
-      case bCard2 OR bCard3 of
+      case bCard2 of
         1  : UserScore :=  UserScore + 1;           //implement bool check for 1 or 11          this loop for user cards, split for comp cards
         2  : UserScore := UserScore + 2;
         3  : UserScore := UserScore + 3;
@@ -213,7 +215,29 @@ begin
         13 : UserScore := UserScore + 10;
       end;
 
-  lblScore.Caption := inttostr(UserScore);
+      if bCard2 = 1 then
+        AcexD := UserScore + 11;
+
+         case bCard3 of
+        1  : UserScore :=  UserScore + 1;           //implement bool check for 1 or 11          this loop for user cards, split for comp cards
+        2  : UserScore := UserScore + 2;
+        3  : UserScore := UserScore + 3;
+        4  : UserScore := UserScore + 4;
+        5  : UserScore := UserScore + 5;
+        6  : UserScore := UserScore + 6;
+        7  : UserScore := UserScore + 7;
+        8  : UserScore := UserScore + 8;
+        9  : UserScore := UserScore + 9;
+        10 : UserScore := UserScore + 10;
+        11 : UserScore := UserScore + 10;
+        12 : UserScore := UserScore + 10;
+        13 : UserScore := UserScore + 10;
+      end;
+
+        if bCard2 = 1 then
+          AcexD := UserScore + 11;
+
+  lblScore.Caption := inttostr(UserScore) + ' OR ' + InttoStr(AcexD);
 end;
 
 procedure TForm2.Button1Click(Sender: TObject);

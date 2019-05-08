@@ -2650,9 +2650,9 @@ object Form2: TForm2
       0000000000000000000000000000000000000000008000000000}
   end
   object lblScore: TLabel
-    Left = 280
-    Top = 696
-    Width = 8
+    Left = 528
+    Top = 544
+    Width = 25
     Height = 33
   end
   object Button1: TButton

@@ -1329,7 +1329,7 @@ object Form2: TForm2
       0000000000000000000000000000000000000000008000000000}
   end
   object SpeedButton3: TSpeedButton
-    Left = 216
+    Left = 96
     Top = 512
     Width = 73
     Height = 97
@@ -1993,7 +1993,7 @@ object Form2: TForm2
     Caption = 'Label1'
   end
   object SpeedButton4: TSpeedButton
-    Left = 368
+    Left = 232
     Top = 512
     Width = 73
     Height = 97
@@ -2652,7 +2652,7 @@ object Form2: TForm2
   object lblScore: TLabel
     Left = 528
     Top = 544
-    Width = 25
+    Width = 8
     Height = 33
   end
   object lblStatus: TLabel
@@ -2669,5 +2669,23 @@ object Form2: TForm2
     Caption = 'Button1'
     TabOrder = 0
     OnClick = Button1Click
+  end
+  object btnHit: TButton
+    Left = 280
+    Top = 640
+    Width = 75
+    Height = 25
+    Caption = 'Hit'
+    TabOrder = 1
+    OnClick = btnHitClick
+  end
+  object btnStay: TButton
+    Left = 440
+    Top = 640
+    Width = 75
+    Height = 25
+    Caption = 'Stay'
+    TabOrder = 2
+    OnClick = btnStayClick
   end
 end

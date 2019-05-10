@@ -35,9 +35,11 @@ type
     bDiamonds : boolean;
     bCard1, bCard2, bCard3 : byte;
     UserScore, OpponentScore, AcexD, totScore : int32;
+        bButton : Boolean;
     procedure Card1;
     procedure Card2;
     procedure Card3;
+    Procedure CreateCard;
     procedure Score;
 
   public
@@ -50,6 +52,24 @@ var
 implementation
 
 {$R *.dfm}
+
+Procedure TForm2.CreateCard;
+begin
+  bButton := false;
+  if bButton = false then
+    begin
+      With TSpeedButton.Create(Form2) do
+        begin
+          Name := 'SpeedButtoNew';
+          Parent := Form2;
+          Top := 25;
+          Width := 73;
+          Height := 97;
+          Left := 25;
+          Visible := true;
+        end;
+    end;
+end;
 procedure TForm2.Card3;
   var
     Suite1, Suite2 : byte;
@@ -270,6 +290,13 @@ procedure TForm2.btnHitClick(Sender: TObject);
   //implement dynamically created speedbutton + add all the properties
 
 begin
+  if bButton = false then
+    begin
+      CreateCard;
+      bButton := true;
+    end;
+
+
   Suite1 := Random(4) + 1;
     case Suite1  of
       1 : bClubs := true;
@@ -281,12 +308,12 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard1 := Random(13) + 1;
-      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
+      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp' );
 
       bClubs := false;
     end
   else
-    if bHearts = true then     //hearts
+    if bHearts = true then     //hearts                                                         -
       begin
        bCard1 := Random(13) + 1;
         SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
@@ -318,6 +345,7 @@ procedure TForm2.btnStayClick(Sender: TObject);
    var
     Suite1, Suite2 : byte;
 begin
+  btnStay.Enabled := false;
   //implement second dealer card implementation
     Suite1 := Random(4) + 1;
     case Suite1  of
@@ -363,6 +391,8 @@ end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
+  btnHit.Visible := true;
+  btnStay.Visible := true;
   Card1;
   Card2;
   Card3;
@@ -371,11 +401,14 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+  btnHit.Visible := false;
+  btnStay.Visible := false;
   Randomize;
   bClubs := false;
   bSpades := false;
   bHearts := false;
   bDiamonds := false;
+  bButton := false;
 end;
 
 end.

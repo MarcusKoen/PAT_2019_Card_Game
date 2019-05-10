@@ -33,11 +33,13 @@ type
     bSpades : boolean;
     bHearts : boolean;
     bDiamonds : boolean;
-    bCard1, bCard2, bCard3 : byte;
+    bCard1, bCard2, bCard3, bCard4 : byte;
     UserScore, OpponentScore, AcexD, totScore : int32;
+        bButton : Boolean;
     procedure Card1;
     procedure Card2;
     procedure Card3;
+    Procedure CreateCard;
     procedure Score;
 
   public
@@ -50,6 +52,64 @@ var
 implementation
 
 {$R *.dfm}
+
+Procedure TForm2.CreateCard;
+  var
+    Suite1, Suite2 : byte;
+begin
+      With TSpeedButton.Create(Form2) do
+        begin
+          Name := 'SpeedButtoNew';
+          Parent := Form2;
+          Top := 512;
+          Width := 73;
+          Height := 97;
+          Left := 376;
+          Visible := true;
+
+
+      Suite1 := Random(4) + 1;
+    case Suite1  of
+      1 : bClubs := true;
+      2 : bHearts := true;
+      3 : bSpades := true;
+      4 : bDiamonds := true;
+    end;
+
+      if bClubs = true then     //Clubs
+    begin
+     bCard4 := Random(13) + 1;
+      Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard4) + 'c.bmp');
+
+      bClubs := false;
+    end
+  else
+    if bHearts = true then     //hearts
+      begin
+       bCard4 := Random(13) + 1;
+        Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard4) + 'h.bmp');
+
+         bHearts := false;
+      end
+    else
+      if bSpades = TRUE then   //spades
+        begin
+         bCard4 := Random(13) + 1;
+          Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard4) + 's.bmp');
+
+          bSpades := false;
+        end
+      else
+        if bDiamonds = true then         // diamonds
+          begin
+           bCard4 := Random(13) + 1;
+            Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard4) + 'd.bmp');
+
+            bDiamonds := false;
+
+end;
+end;
+end;
 procedure TForm2.Card3;
   var
     Suite1, Suite2 : byte;
@@ -265,59 +325,19 @@ begin
 end;
 
 procedure TForm2.btnHitClick(Sender: TObject);
-  var
-    Suite1, Suite2 : byte;
-  //implement dynamically created speedbutton + add all the properties
-
 begin
-  Suite1 := Random(4) + 1;
-    case Suite1  of
-      1 : bClubs := true;
-      2 : bHearts := true;
-      3 : bSpades := true;
-      4 : bDiamonds := true;
-    end;
-
-      if bClubs = true then     //Clubs
+  if bButton = false then
     begin
-     bCard1 := Random(13) + 1;
-      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
-
-      bClubs := false;
-    end
-  else
-    if bHearts = true then     //hearts
-      begin
-       bCard1 := Random(13) + 1;
-        SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
-
-         bHearts := false;
-      end
-    else
-      if bSpades = TRUE then   //spades
-        begin
-         bCard1 := Random(13) + 1;
-          SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 's.bmp');
-
-          bSpades := false;
-        end
-      else
-        if bDiamonds = true then         // diamonds
-          begin
-           bCard1 := Random(13) + 1;
-            SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 'd.bmp');
-
-            bDiamonds := false;
-          end;
-
-
-
+      CreateCard;
+      bButton := true;
+    end;
 end;
 
 procedure TForm2.btnStayClick(Sender: TObject);
    var
     Suite1, Suite2 : byte;
 begin
+  btnStay.Enabled := false;
   //implement second dealer card implementation
     Suite1 := Random(4) + 1;
     case Suite1  of
@@ -330,7 +350,7 @@ begin
       if bClubs = true then     //Clubs
     begin
      bCard1 := Random(13) + 1;
-      SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
+      SpeedButton2.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' + IntToStr(bCard1) + 'c.bmp');
 
       bClubs := false;
     end
@@ -338,7 +358,7 @@ begin
     if bHearts = true then     //hearts
       begin
        bCard1 := Random(13) + 1;
-        SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
+        SpeedButton2.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\'  + IntToStr(bCard1) + 'h.bmp');
 
          bHearts := false;
       end
@@ -346,7 +366,7 @@ begin
       if bSpades = TRUE then   //spades
         begin
          bCard1 := Random(13) + 1;
-          SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 's.bmp');
+          SpeedButton2.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 's.bmp');
 
           bSpades := false;
         end
@@ -354,7 +374,7 @@ begin
         if bDiamonds = true then         // diamonds
           begin
            bCard1 := Random(13) + 1;
-            SpeedButton1.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 'd.bmp');
+            SpeedButton2.Glyph.LoadFromFile(GetCurrentDir + '\card-BMPs\' +  IntToStr(bCard1) + 'd.bmp');
 
             bDiamonds := false;
           end;
@@ -363,6 +383,8 @@ end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
+  btnHit.Visible := true;
+  btnStay.Visible := true;
   Card1;
   Card2;
   Card3;
@@ -371,11 +393,14 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+  btnHit.Visible := false;
+  btnStay.Visible := false;
   Randomize;
   bClubs := false;
   bSpades := false;
   bHearts := false;
   bDiamonds := false;
+  bButton := false;
 end;
 
 end.

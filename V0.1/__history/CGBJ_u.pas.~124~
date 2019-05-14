@@ -18,6 +18,8 @@ type
     lblStatus: TLabel;
     btnHit: TButton;
     btnStay: TButton;
+    Memo1: TMemo;
+    Memo2: TMemo;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnHitClick(Sender: TObject);
@@ -25,10 +27,7 @@ type
   private
 
     { Private declarations }
-    {arrClubs1 : array[1..13] of string;
-    arrHearts2 : array[1..13] of string;
-    arrSpades3 : array[1..13] of string;
-    arrDiamonds4 : array[1..13] of string;} // awaiting array implementation to delete duplicate card or just implement if statements
+   // awaiting array implementation to delete duplicate card or just implement if statements
     bClubs : boolean;
     bSpades : boolean;
     bHearts : boolean;
@@ -36,12 +35,14 @@ type
     bCard1, bCard2, bCard3, bCard4 : byte;
     UserScore, OpponentScore, AcexD, totScore : int32;
         bButton : Boolean;
+              arrDeck : Array of Array of byte;
     procedure Card1;
     procedure Card2;
     procedure Card3;
     Procedure CreateCard;
     procedure Score;
     Procedure ClearScreen;
+    procedure DeckCreation;
 
   public
     { Public declarations }
@@ -53,6 +54,75 @@ var
 implementation
 
 {$R *.dfm}
+
+Procedure TForm2.DeckCreation;
+  var
+    k, j, i: byte;
+    Card, Suite : integer;
+begin
+  SetLength(arrDeck, 4); //suite array
+
+  for k := 0 to 3 do
+    begin
+      SetLength(arrDeck[k], 13);
+    end;
+
+
+  for k := 0 to 3 do
+    begin
+      for j := 1 to 10 do
+        begin
+          arrDeck[k,j] := j;
+            for i := 11 to 13 do
+              begin
+                arrDeck[k, i] := 10;
+              end;
+        end;
+    end;
+
+  for k := 0 to 3 do
+    begin
+      for j := 1 to 13 do
+        begin
+          Memo1.Lines.Add(inttostr(arrDeck[k,j]));
+        end;
+    end;
+
+    Suite := Random(4);
+
+    case Suite of
+       0 : k := 0;
+       1 : k := 1;
+       2 : k := 2;
+       3 : k := 3;
+    end;
+
+    case k of
+      0 : begin
+       Card := Random(13) + 1;
+
+
+       if arrDeck[k, Card] <> 0 then
+        Memo2.Lines.Add(inttostr(arrDeck[k, Card]))
+      end;
+      1 : begin
+        Card := Random(13) + 1;
+         if arrDeck[k, Card] <> 0 then
+        Memo2.Lines.Add(inttostr(arrDeck[k, Card]));
+      end;
+      2 : begin
+        Card := Random(13) + 1;
+         if arrDeck[k, Card] <> 0 then
+        Memo2.Lines.Add(inttostr(arrDeck[k, Card]));
+      end;
+      3 : begin
+       Card := Random(13) + 1;
+        if arrDeck[k, Card] <> 0 then
+       Memo2.Lines.Add(inttostr(arrDeck[k, Card]));
+
+      end;
+    end;
+end;
 
 Procedure Tform2.ClearScreen;
 begin
@@ -165,17 +235,17 @@ begin
 
 end;
 
-procedure TForm2.Card2;
+procedure TForm2.Card2;         //only new implemented
   var
     Suite1, Suite2 : byte;
    // bCard2 : byte;
 begin
-    Suite1 := Random(4) + 1;
+    Suite1 := Random(4);
     case Suite1  of
-      1 : bClubs := true;
-      2 : bHearts := true;
-      3 : bSpades := true;
-      4 : bDiamonds := true;
+      0 : bClubs := true;
+      1 : bHearts := true;
+      2 : bSpades := true;
+      3 : bDiamonds := true;
     end;
 
       if bClubs = true then     //Clubs
@@ -343,7 +413,7 @@ begin
 
   if totScore = 21 then
     begin
-      lblStatus.Caption := 'win'
+      lblStatus.Caption := 'win';
       ClearScreen;
     end
   else
@@ -357,6 +427,7 @@ end;
 
 procedure TForm2.btnHitClick(Sender: TObject);
 begin
+  btnStay.Enabled := false;
   if bButton = false then
     begin
       CreateCard;
@@ -415,6 +486,8 @@ end;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
+  DeckCreation;
+  Button1.Enabled := false;
   btnHit.Visible := true;
   btnStay.Visible := true;
   Card1;

@@ -2688,4 +2688,22 @@ object Form2: TForm2
     TabOrder = 2
     OnClick = btnStayClick
   end
+  object Memo1: TMemo
+    Left = 568
+    Top = 256
+    Width = 185
+    Height = 249
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 3
+  end
+  object Memo2: TMemo
+    Left = 96
+    Top = 240
+    Width = 185
+    Height = 89
+    Lines.Strings = (
+      'Memo2')
+    TabOrder = 4
+  end
 end
